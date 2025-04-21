@@ -43,5 +43,8 @@
 </table>
 <div class="text-center">
 	<a class="btn btn-primary" href="@Model.ReTurnUrl">Continue Shopping</a>
-	<a class="btn btn-primary" asp-action="Checkout" asp-controller="Order">Checkout</a>
+	<!-- Thay đổi thẻ a thành form để submit đến controller Order action Checkout -->
+	<form asp-controller="Order" asp-action="Checkout" method="get" style="display: inline;">
+		<button type="submit" class="btn btn-primary">Checkout</button>
+	</form>
 </div>

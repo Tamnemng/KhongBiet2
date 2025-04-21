@@ -1,0 +1,10 @@
+@{
+    ViewData["Title"] = "Empty Cart";
+}
+
+<div class="text-center">
+    <h2>Empty Cart</h2>
+    <p class="text-danger">@TempData["CartEmpty"]</p>
+    <p>Your cart is currently empty. Please add some products before proceeding to checkout.</p>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Continue Shopping</a>
+</div>

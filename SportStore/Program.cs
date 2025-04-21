@@ -11,6 +11,7 @@ builder.Services.AddDbContext<StoreDbContext>(opts =>
 });
 
 builder.Services.AddScoped<IStoreRepository, EFStoreRepository>();
+builder.Services.AddScoped<IOrderRepository, EFOrderRepository>();
 builder.Services.AddRazorPages();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
@@ -30,10 +31,6 @@ app.UseSession();
 app.UseRouting();
 
 //app.UseAuthorization();
-
-//app.MapControllerRoute(
-//    name: "default",
-//    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute("catpage", "{category}/Page{productPage:int}",
     new { Controller = "Home", action = "Index" });
