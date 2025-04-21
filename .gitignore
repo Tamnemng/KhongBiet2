@@ -1,0 +1,5 @@
+.SportStore.Test
+.vs
+SportStore.sln
+SportStore/bin
+SportStore/obj
